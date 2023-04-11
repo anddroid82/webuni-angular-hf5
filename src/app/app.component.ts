@@ -14,6 +14,7 @@ export interface Infection {
 export class AppComponent implements OnInit {
   title = 'webuni-angular-hf5';
   infections: Infection[] = [];
+  iWantTheTruth=true;
 
   ngOnInit(): void {
     this.createInfections();

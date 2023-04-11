@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { DatePipe } from '@angular/common';
 import { AppComponent } from './app.component';
 import { InfectionPipe } from './infection.pipe';
+import { InfectionDirective } from './infection.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InfectionPipe
+    InfectionPipe,
+    InfectionDirective
   ],
   imports: [
     BrowserModule
