@@ -24,8 +24,8 @@ export class AppComponent implements OnInit {
     for (let i = 0; i < 10; i++) {
       this.infections.push({
         date: new Date(2021, Math.floor(Math.random() * 11 + 1), Math.floor(Math.random() * 20)),
-        tests: Math.round(Math.random() * 1000),
-        inHospital: Math.round(Math.random() * 2000)
+        tests: Math.round(Math.random() * 800)+400,
+        inHospital: Math.round(Math.random() * 600+400)
       });
     }
   }
