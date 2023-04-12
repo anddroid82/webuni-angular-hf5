@@ -11,7 +11,7 @@ export class InfectionPipe implements PipeTransform {
   transform(value: Infection, iWantTheTruth=false): unknown {
     const dateString=this.datePipe.transform(value.date, 'yyyy-MM-dd');
     const tests = iWantTheTruth?value.tests:value.tests*2;
-    const newInfections=iWantTheTruth?0:Math.max(Math.floor(Math.random()*500),Math.floor(value.tests*0.05));
+    const newInfections=iWantTheTruth?'Nem ismert':Math.max(Math.floor(Math.random()*500),Math.floor(value.tests*0.05));
     const inHospital=iWantTheTruth?value.inHospital:Math.floor(value.inHospital/3);
     return `A mintavételek száma: ${tests}, az újonnan azonosított fertőzöttek száma: ${newInfections}, a kórházban lévők száma, akik mindannyian oltatlan, idős, krónikus betegek: ${inHospital} (${dateString})`;
   }
