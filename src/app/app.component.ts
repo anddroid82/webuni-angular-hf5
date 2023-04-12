@@ -14,7 +14,7 @@ export interface Infection {
 export class AppComponent implements OnInit {
   title = 'webuni-angular-hf5';
   infections: Infection[] = [];
-  iWantTheTruth=true;
+  iWantTheTruth=false;
 
   ngOnInit(): void {
     this.createInfections();
@@ -23,10 +23,13 @@ export class AppComponent implements OnInit {
   createInfections() {
     for (let i = 0; i < 10; i++) {
       this.infections.push({
-        date: new Date(2021, Math.floor(Math.random() * 11 + 1), Math.floor(Math.random() * 20)),
+        date: new Date(2021, Math.floor(Math.random() * 11 + 1), Math.floor(Math.random() * 28)),
         tests: Math.round(Math.random() * 800)+400,
         inHospital: Math.round(Math.random() * 600+400)
       });
     }
+    this.infections.sort((a,b)=>{
+      return a.date.getTime()-b.date.getTime();
+    });
   }
 }
