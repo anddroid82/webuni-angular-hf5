@@ -32,4 +32,8 @@ export class AppComponent implements OnInit {
       return a.date.getTime()-b.date.getTime();
     });
   }
+
+  appInfectionTruthChanged(b:any) {
+    this.iWantTheTruth = b;
+  }
 }
