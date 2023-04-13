@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
     });
   }
 
-  appInfectionTruthChanged(b:any) {
+  appInfectionTruthChanged(b:boolean) {
     this.iWantTheTruth = b;
   }
 }
